@@ -1,5 +1,10 @@
 # Skin cancer images classification
 
+
+<div align="center">
+    <img src="/readme_images/checking_skin_cancer.jpg">
+</div>
+
 ## Skin cancer 
 
 Skin cancer is the most common cancer in the United States of America (U.S.A.), and is estimated that about 4.9 million U.S. adults were treated for skin cancer each year from 2007 to 2011, for an average annual treatment cost of $8.1 billion. [1](https://pubmed.ncbi.nlm.nih.gov/26042651/),[2](https://pubmed.ncbi.nlm.nih.gov/25442229/)
@@ -16,6 +21,36 @@ Dermatologists advises a regular self exam with a monthly periodicity. During ea
 
 
 ## Dataset description
+
+The HAM10000 ("Human Against Machine with 10000 training images") dataset was provided by International Skin Imaging Collaboration (ISIC) for the 2018 challenge hosted at the Medical Image Computing and Computer Assisted Intervention (MICCAI) conference in Granada, Spain and is a collection of dermatoscopic images from different populations, acquired and stored by different modalities. The dataset consists of 10015 dermatoscopic images, and corresponding metadata, which can serve as a training set for academic machine learning purposes. [dataset](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T)
+
+HAM10000 dataset has **7 different classes** of skin cancer which are listed below :
+- Actinic keratoses and intraepithelial carcinoma / Bowen's disease (**akiec**), 
+- Basal cell carcinoma (**bcc**), 
+- Benign keratosis-like lesions (solar lentigines / seborrheic keratoses and lichen-planus like keratoses, **bkl**),
+- Dermatofibroma (**df**),
+- Melanoma (**mel**), 
+- Melanocytic nevi (**nv**) 
+- Vascular lesions (angiomas, angiokeratomas, pyogenic granulomas and hemorrhage, **vasc**)
+
+HAM10000 dataset metadata has **7 different features** which are listed below :
+
+<ol>
+  <li><strong>lesion_id</strong> : patient lesion id, one lesion can have multiple images</li>
+  <li><strong>image_id</strong> : image id, each image is unique</li>
+  <li><strong>dx</strong> : skin cancer class [akiec, bcc, bkl, df, mel, nv, vasc]</li>
+  <li><strong>dx_type</strong> : how the diagnosis was achieved [histo, follow_up, consensus, confocal]</li>
+    <ul>
+      <li><ins>histo</ins> : confirmed through histopathology </li>
+      <li><ins>follow_up</ins> : diagnosis through follow-up examination</li>
+      <li><ins>consensus</ins> : expert consensus</li>
+      <li><ins>confocal</ins> : in-vivo confocal microscopy</li>
+    </ul>
+  <li><strong>age</strong> : patient age</li>
+  <li><strong>sex</strong> : patient gender</li>
+  <li><strong>localization</strong> : cancer localization</li>
+</ol>
+
 
 ## Data exploration
 
