@@ -155,3 +155,4 @@ skin_cancer_dataset/hmnist_28_28_L.csv
 skin_cancer_dataset/hmnist_28_28_RGB.csv
 skin_cancer_dataset/hmnist_8_8_L.csv
 skin_cancer_dataset/hmnist_8_8_RGB.csv
+cancers_mosaic_image/mosaic_skin_cancer.png
