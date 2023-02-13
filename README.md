@@ -60,7 +60,7 @@ In order to understand the different skin cancer visual characteristics, an imag
     <img src="/readme_images/mosaic_skin_cancer.png">
 </div>
 
-According the exploration performed in the dataset metadata file, the dataset is comprised of 10015 images and 7 different indepent variables gives information about the dataset. There are 57 missing values on the independent variable Age, to replace this missing values a study about Age data distribution was made and since a clear symmetric data distribution is visible the Mean Age is used to fill the missing Age values.
+According to the exploration conducted in the dataset's metadata file, the dataset consists of 10015 images and 7 independent variables that provide information about the dataset. There are 57 missing values in the independent variable "Age." To replace these missing values, a study on the distribution of the Age data was conducted and, as a clear symmetrical distribution was visible, the mean Age was used to fill the missing Age values.
 
 <div align="center">
     <img src="/readme_images/age_boxplot.png">
@@ -73,7 +73,7 @@ A total data of 7470 patients are recorded in the dataset, were 4001 patients ar
     <img src="/readme_images/gender_plot.png">
 </div>
 
-Melanocytic nevi, labeled **nv**, with 6705 example images, is the most represented skin cancer in the dataset. Melanoma (**mel**) and benign keratosis-like lesions (**bkl**) are the second most represented with 1113 and 1099 images respectively. Basal cell carcinoma (**bcc**) have 514 examples while actinic keratoses and Bowen's disease (**akiec**) have 327 images. Vascular lesions (angiomas, angiokeratomas, pyogenic granulomas and hemorrhage) (**vasc**) and Dermatofibroma (**df**) have considerable less example images, with 142 and 115 images respectively.
+The skin cancer most represented in the dataset is Melanocytic Nevi, labeled **nv**, with 6705 example images. The second most represented are Melanoma, labeled **mel**, with 1113 images, and Benign Keratosis-like Lesions, labeled **bkl**, with 1099 images. Basal Cell Carcinoma, labeled **bcc**, has 514 examples, while Actinic Keratoses and Bowen's Disease, labeled **akiec**, have 327 images. Vascular Lesions, including angiomas, angiokeratomas, pyogenic granulomas, and hemorrhage, labeled **vasc**, and Dermatofibroma, labeled **df**, have significantly fewer example images, with 142 and 115 images respectively.
 
 <div align="center">
     <img src="/readme_images/cancer_plot.png">
@@ -91,7 +91,7 @@ Only a residual number of cancers was diagnosticated through in-vivo **confocal*
     <img src="/readme_images/cancer_diagnosis_types_plot.png">
 </div>
 
-Is interesting to notice that although **follow up** is the second most used method to diagnosis skin cancer, it was only applied to the diagnosis of Melanocytic nevi skin cancer. In-vivo confocal microscopy diagnosis was only applied to Benign keratosis-like lesions. Both, Melanocytic nevi and Benign keratosis-like lesions, also needed medical consensus in order to be diagnosed and both needed histopathology exam, which might indicate that these cancers are harder to diagnosis than the rest of the skin cancers present in the dataset.
+It is noteworthy that, although **follow up** is the second most utilized method for diagnosing skin cancer, it was only used to diagnose Melanocytic Nevi. In-vivo **confocal** microscopy diagnosis was only used for the diagnosis of Benign Keratosis-like Lesions. Both Melanocytic Nevi and Benign Keratosis-like Lesions also required medical **consensus** for diagnosis and both required a **histopathology** exam, suggesting that these types of skin cancer may be more challenging to diagnose than the other skin cancers present in the dataset.
 
 <div align="center">
     <img src="/readme_images/each_cancer_diagnosis_types_plot.png">
@@ -103,7 +103,7 @@ The quantity of skin cancer example images by gender is similar but with a sligh
     <img src="/readme_images/cancer_types_prevalence_gender.png">
 </div>
 
-It is observable that skin cancer cases are more frequent in patients with age comprehended between 40 and 55 years. There are records of patients with age equals to 0, therefor it is needed to confirm these data.
+It is observed that skin cancer cases are more prevalent in patients aged between 40 and 55 years. There are records of patients with an age of 0, so it is necessary to verify this information.
 
 <div align="center">
     <img src="/readme_images/gender_age_plot.png">
@@ -126,7 +126,7 @@ In men the back region is the are with the most skin cancer cases diagnosed, whi
     <img src="/readme_images/cancer_prevalent_localization_gender.png">
 </div>
 
-Melanocytic nevi is prevalent in all body parts except in the face region, where Benign keratosis-like lesions are prevalent. Melanoma are commonly diagnosed in the back, lower and upper extrimities regions.
+Melanocytic Nevi is widely distributed in all parts of the body, except for the face area where Benign Keratosis-like Lesions are more common. Melanoma is frequently diagnosed in the back, lower and upper extremities regions.
 
 <div align="center">
     <img src="/readme_images/cancer_prevalent_localization.png">
