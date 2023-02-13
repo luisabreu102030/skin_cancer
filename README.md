@@ -54,4 +54,90 @@ HAM10000 dataset metadata has **7 different features** which are listed below :
 
 ## Data exploration
 
+In order to understand the different skin cancer visual characteristics, an image was built with 3 randomly selected images from each skin cancer presented in the dataset.
+
+<div align="center">
+    <img src="/readme_images/mosaic_skin_cancer.png">
+</div>
+
+According to the exploration conducted in the dataset's metadata file, the dataset consists of 10015 images and 7 independent variables that provide information about the dataset. There are 57 missing values in the independent variable "Age." To replace these missing values, a study on the distribution of the Age data was conducted and, as a clear symmetrical distribution was visible, the mean Age was used to fill the missing Age values.
+
+<div align="center">
+    <img src="/readme_images/age_boxplot.png">
+    <img src="/readme_images/age_distplot.png">
+</div>
+
+A total data of 7470 patients are recorded in the dataset, were 4001 patients are man, 3419 are woman and 50 patients gender is undisclosed.
+
+<div align="center">
+    <img src="/readme_images/gender_plot.png">
+</div>
+
+The skin cancer most represented in the dataset is Melanocytic Nevi, labeled **nv**, with 6705 example images. The second most represented are Melanoma, labeled **mel**, with 1113 images, and Benign Keratosis-like Lesions, labeled **bkl**, with 1099 images. Basal Cell Carcinoma, labeled **bcc**, has 514 examples, while Actinic Keratoses and Bowen's Disease, labeled **akiec**, have 327 images. Vascular Lesions, including angiomas, angiokeratomas, pyogenic granulomas, and hemorrhage, labeled **vasc**, and Dermatofibroma, labeled **df**, have significantly fewer example images, with 142 and 115 images respectively.
+
+<div align="center">
+    <img src="/readme_images/cancer_plot.png">
+</div>
+
+It is possible to observe that 42,6% of the skin cancer recorded are located at the back and in the lower extremity while 25,4% of the cancers are placed at the trunk, upper extremity and abdomen.
+
+<div align="center">
+    <img src="/readme_images/cancer_localization_plot.png">
+</div>
+
+Only a residual number of cancers was diagnosticated through in-vivo **confocal** microscopy. The second most used method to diagnosis skin cancer was the **follow up** method, which reinforces the importance of regular medical check-ups. The first most used is confirmation by **histopathology** exam.
+
+<div align="center">
+    <img src="/readme_images/cancer_diagnosis_types_plot.png">
+</div>
+
+It is noteworthy that, although **follow up** is the second most utilized method for diagnosing skin cancer, it was only used to diagnose Melanocytic Nevi. In-vivo **confocal** microscopy diagnosis was only used for the diagnosis of Benign Keratosis-like Lesions. Both Melanocytic Nevi and Benign Keratosis-like Lesions also required medical **consensus** for diagnosis and both required a **histopathology** exam, suggesting that these types of skin cancer may be more challenging to diagnose than the other skin cancers present in the dataset.
+
+<div align="center">
+    <img src="/readme_images/each_cancer_diagnosis_types_plot.png">
+</div>
+
+The quantity of skin cancer example images by gender is similar but with a slight more number of examples for the masculine gender patients.
+
+<div align="center">
+    <img src="/readme_images/cancer_types_prevalence_gender.png">
+</div>
+
+It is observed that skin cancer cases are more prevalent in patients aged between 40 and 55 years. There are records of patients with an age of 0, so it is necessary to verify this information.
+
+<div align="center">
+    <img src="/readme_images/gender_age_plot.png">
+</div>
+
+In the following plot reinforces the idea that at the age of 40 skin cancer diagnosis is higher than in younger ages.
+<div align="center">
+    <img src="/readme_images/age_cancer_plot.png">
+</div>
+
+At the age of 70 more cases of skin cancer located at the face of the patients is more common, while at the age of 50 is more common to diagnosis cancer at the trunk region. The back region is the most prone to skin cancer diagnosis area.
+
+<div align="center">
+    <img src="/readme_images/age_cancer_localization_plot.png">
+</div>
+
+In men the back region is the are with the most skin cancer cases diagnosed, while in women is the lower extremity area. At the acral region(e.g. peripheral body parts, such as toes and fingers) only women have records of skin cancer diagnosis.
+
+<div align="center">
+    <img src="/readme_images/cancer_prevalent_localization_gender.png">
+</div>
+
+Melanocytic Nevi is widely distributed in all parts of the body, except for the face area where Benign Keratosis-like Lesions are more common. Melanoma is frequently diagnosed in the back, lower and upper extremities regions.
+
+<div align="center">
+    <img src="/readme_images/cancer_prevalent_localization.png">
+</div>
+
+
+The following plot tries to capture in a easier way visual relationships between the different features presented on dataset.
+<div align="center">
+    <img src="/readme_images/visual_relationships.png">
+</div>
+
+
+
 ## CNN for Human skin cancer images classification
