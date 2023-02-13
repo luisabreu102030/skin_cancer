@@ -54,6 +54,12 @@ HAM10000 dataset metadata has **7 different features** which are listed below :
 
 ## Data exploration
 
+In order to understand the different skin cancer visual characteristics, an image was built with 3 randomly selected images from each skin cancer presented in the dataset.
+
+<div align="center">
+    <img src="/readme_images/mosaic_skin_cancer.png">
+</div>
+
 According the exploration performed in the dataset metadata file, the dataset is comprised of 10015 images and 7 different indepent variables gives information about the dataset. There are 57 missing values on the independent variable Age, to replace this missing values a study about Age data distribution was made and since a clear symmetric data distribution is visible the Mean Age is used to fill the missing Age values.
 
 <div align="center">
