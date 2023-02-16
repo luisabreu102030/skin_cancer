@@ -141,3 +141,48 @@ The following plot tries to capture in a easier way visual relationships between
 
 
 ## CNN for Human skin cancer images classification
+
+The aim of this project was to gain familiarity with the techniques necessary to perform image classification and to develop a better understanding of the issue of skin cancer. 
+
+### Data preparation
+Data preparation is a crucial step in building a successful Convolutional Neural Network (CNN) for image classification and in any other AI algorithm. Here are some key steps to follow during data preparation:
+
+<ol>
+  <li><strong>Collect and organize the data</strong> : Gather a large number of images for the dataset and organize them into categories or labels. Ensure that the data is diverse and representative of the real-world scenarios that the model will encounter. In this case, as mentioned, I have used a dataset provided by ISIC for the 2018 challenge hosted at MICCAI.</li>
+  <li><strong>Data cleaning</strong> : The images from the dataset all had good quality, were unique and representative of the skin cancer. If this wasn't the case steps to remove any irrelevant images, duplicates, or images with low resolution should've been done.</li>
+  <li><strong>Split the dataset</strong> : Divide the dataset into training, validation, and testing sets. I have used 60% of the data for training, 20% for validation, and 20% for testing. The training set is used to train the model, the validation set is used to tune the hyperparameters and check for overfitting, and the testing set is used to evaluate the model's performance. In my case I haven't proceed with hyperparameters tunning because in this work I am interested in learning the various stages and steps to perform for Image classification.</li>
+  <li><strong>Preprocessing</strong> : Preprocessing is an essential step in image classification. Techniques such as resizing, normalization, and cropping can be used to make the images uniform and compatible with the model. It's important to ensure that the preprocessing techniques used are suitable for the type of images we have and the task we're trying to solve. In this work the image was resized from 600x450 to 100x75, and I have proceed to a standardization of the images.</li>
+  <li><strong>Data augmentation</strong> : Data augmentation is the process of artificially increasing the size of your dataset by creating new images based on the existing ones. Through techniques such as rotation, flipping, zooming, and changing brightness to create new variations of the images in the dataset. When an instance of ImageDataGenerator is created, the generator will randomly apply these augmentations to the input images during training. The result is that the model sees a larger variety of images during training, which helps prevent overfitting and improves the model's ability to generalize to new images. It's important to note that the specific augmentations you choose to use will depend on the nature of your problem and the type of images you're working with. These parameters are just some examples of the many types of data augmentations that can be applied with ImageDataGenerator. In this work I have created an instance of ImageDataGenerator with the following parameters parameters : </li>
+    <ul>
+      <li><ins>shear_range=0.2</ins> : Shear transformation refers to slanting or skewing an image. This parameter specifies the range of shear angles to apply to the input images, in radians </li>
+      <li><ins>zoom_range=0.2</ins> : Zooming an image refers to scaling the image up or down. This parameter specifies the range of zoom values to apply to the input images. A zoom value of 0.2 means the image can be zoomed up to 20%</li>
+      <li><ins>horizontal_flip=True</ins> : Horizontal flipping refers to flipping the image horizontally. This parameter specifies whether to randomly flip the input images horizontally</li>
+    </ul>
+  <li><strong>Data balancing</strong> : Ensure that each class has an equal number of samples to avoid bias in the model. Techniques such as oversampling or undersampling can be used to balance the dataset, in my case I havn't applied none of this techniques</li>
+</ol>
+
+By following these steps, it is possible to create a high-quality dataset that is suitable for training the CNN model for image classification.
+
+### Model architecture
+
+The model architecture was chosen in a manner that prioritized the objective of learning image classification using CNN over the development of a high-performance model. While the architecture selection process was not exhaustive, it was not random and was based on the task at hand.
+
+<div align="center">
+    <img src="/readme_images/model_architecture.png">
+</div>
+
+### Result
+
+<div align="center">
+    <img src="/readme_images/confusion_matrix.png">
+</div>
+
+The CNN model achieved an **accuracy of 70%** with a **loss of 1.7726**. The confusion matrix indicates that the skin cancer type with the highest prevalence in the dataset, Melanocytic Nevi, was classified with the highest accuracy. However, the model struggled to accurately classify Dermatofibroma and Vascular Lesions due to the lack of data for these skin cancer types in the dataset.
+
+This work has room for improvement, and future efforts should consider implementing the following steps to enhance the model:
+
+- Incorporate a hyperparameter optimization stage to improve the model's performance.
+- Enhance the data augmentation techniques to increase the diversity and quality of the dataset.
+- Due to the class imbalance in the dataset, utilize the F1 score instead of accuracy to evaluate the model's performance.
+- Apply various cross-validation techniques to ensure that the model is robust and generalizes well.
+- Experiment with other CNN architectures to find the best model for the task.
